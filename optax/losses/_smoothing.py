@@ -56,4 +56,4 @@ def smooth_labels(
     num_categories = jnp.maximum(num_categories, 1)
     smoothing = jnp.where(where, alpha / num_categories, 0.0)
   # pyrefly: ignore [bad-return]
-  return (1.0 - alpha) * labels + smoothing  # pytype: disable=bad-return-type  # jax-arraylike # noqa: E501
+  return (1.0 - alpha) * labels + smoothing
